@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 
 const Hero = () => {
     return (
-        <div className="w-full h-screen border-b border-black">
+        <div className="w-full h-[calc(100vh-72px)] border-y mt-[72px] border-black">
             <div className="container mx-auto border-r border-l border-black flex items-center justify-center flex-col h-full">
                 <div className="text-[30px] font-[funny] flex">
                     {/* <TextAnimate> */}

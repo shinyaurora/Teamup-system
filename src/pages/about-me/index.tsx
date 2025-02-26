@@ -3,6 +3,7 @@ import Experience from "@/components/about-me/experience";
 import Hero from "@/components/about-me/hero";
 import Navbar from "@/components/about-me/navbar";
 import { SideNav } from "@/components/about-me/sidenav";
+import Skills from "@/components/about-me/skill";
 
 const AboutMe: React.FC = () => {
     return (
@@ -13,6 +14,7 @@ const AboutMe: React.FC = () => {
             <SideNav />
             <Hero />
             <Experience />
+            <Skills />
         </div>
     );
 }

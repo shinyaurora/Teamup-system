@@ -2,12 +2,12 @@ import { SparklesText } from "../magicui/sparkles-text";
 
 const Experience = () => {
     return (
-        <div className="w-full">
-            <div className="container mx-auto">
-                <h3 className="text-center font-bold font-[funny] text-3xl mt-12 mb-8">
+        <div className="w-full border-b border-black/50">
+            <div className="container mx-auto border-x border-black/50 py-12">
+                <h3 className="text-center font-bold font-[funny] text-3xl">
                     <SparklesText text="Professional Journey" className="text-3xl" />
                 </h3>
-                <div className="p-4 flex justify-center">
+                <div className="p-4 flex justify-center mt-6">
                     <div className="-my-6 font-[funny]">
 
                         <div className="relative pl-8 sm:pl-32 py-3 group">

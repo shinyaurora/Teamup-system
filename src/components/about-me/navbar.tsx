@@ -5,7 +5,7 @@ import { ArrowRightIcon } from "lucide-react";
 
 const Navbar = () => {
     return (
-        <div className="w-full border-b border-black/50 fixed top-0 backdrop-blur-3xl z-30">
+        <div className="w-full fixed top-0 backdrop-blur-3xl z-30 bg-orange-300/10">
             <div className="container mx-auto">
                 <div className="flex items-center justify-between h-14 md:h-18 w-full px-8 py-4">
                     <img src={LOGO} className="h-full w-auto  sm:block" />
