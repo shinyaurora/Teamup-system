@@ -81,7 +81,7 @@ const DATA = {
 export function SideNav() {
     return (
         <TooltipProvider>
-            <Dock direction="middle" className="fixed bottom-4 border border-black/50 left-1/2 transform -translate-x-1/2 backdrop-blur-md rounded-full">
+            <Dock direction="middle" className="fixed bottom-4 border border-black/50 left-1/2 transform -translate-x-1/2 backdrop-blur-3xl z-20 rounded-full">
                 {DATA.navbar.map((item) => (
                     <DockIcon key={item.label}>
                         <Tooltip>
