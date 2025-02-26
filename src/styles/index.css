@@ -6,11 +6,26 @@
 * {
   cursor: none;
   -webkit-user-drag: none;
+
+  ::-webkit-scrollbar {
+    /* Customize the scrollbar width */
+    width: 3px;
+  }
+
+  ::-webkit-scrollbar-track {
+    /* Customize the scrollbar track */
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    /* Customize the scrollbar thumb */
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
 
 body {
   background-color: #EAE1D8;
-  overflow: hidden
+  overflow: hidden;
 }
 
 @import "tailwindcss";
@@ -141,31 +156,53 @@ body {
   --animate-shiny-text: shiny-text 8s infinite;
 
   @keyframes shiny-text {
-    0%, 90%, 100% {
+
+    0%,
+    90%,
+    100% {
       background-position: calc(-100% - var(--shiny-width)) 0;
     }
-    30%, 60% {
+
+    30%,
+    60% {
       background-position: calc(100% + var(--shiny-width)) 0;
     }
   }
-  --animate-gradient: gradient 8s linear infinite;
+
   --color-color-5: var(----color-5);
   --color-color-4: var(----color-4);
   --color-color-3: var(----color-3);
   --color-color-2: var(----color-2);
   --color-color-1: var(----color-1);
 
-  @keyframes gradient {
-    to {
-      backgroundPosition: var(--bg-size) 0;
+  --animate-wiggle: wiggle 1s ease-in-out infinite;
+  --animate-gradient: gradient 8s linear infinite;
+
+  @keyframes wiggle {
+
+    0%,
+    100% {
+      transform: rotate(-6deg);
+    }
+
+    50% {
+      transform: rotate(6deg);
     }
   }
-  --animate-rainbow: rainbow var(--speed, 2s) infinite linear;
+
+  @keyframes gradient {
+    to {
+      background-position: var(--bg-size) 0;
+    }
+  }
+
+  --animate-rainbow: rainbow 2s infinite linear;
 
   @keyframes rainbow {
     0% {
       background-position: 0%;
     }
+
     100% {
       background-position: 200%;
     }
@@ -175,7 +212,9 @@ body {
 @layer base {
   * {
     @apply border-border outline-ring/50;
+
   }
+
   body {
     @apply bg-background text-foreground;
   }

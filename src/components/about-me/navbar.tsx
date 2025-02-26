@@ -1,31 +1,14 @@
 import LOGO from "@/assets/images/logo.png";
 import { cn } from "@/lib/utils";
-import { Link } from "react-router-dom";
 import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text";
 import { ArrowRightIcon } from "lucide-react";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuTrigger } from "../ui/dropdown-menu";
-import { Button } from "../ui/button";
 
 const Navbar = () => {
     return (
-        <div className="w-full border-b border-black/50 fixed top-0">
+        <div className="w-full border-b border-black/50 fixed top-0 backdrop-blur-3xl z-20">
             <div className="container mx-auto">
                 <div className="flex items-center justify-between h-14 md:h-18 w-full px-8 py-4">
-                    <img src={LOGO} className="h-full w-auto hidden sm:block" />
-                    {/* <div className="flex items-center font-[funny]">
-                        <Link to={"#"} className="text-sm px-4 py-2 rounded-full hover:bg-white font-semibold transition-all duration-300">
-                            About
-                        </Link>
-                        <Link to={"#"} className="text-sm px-4 py-2 rounded-full hover:bg-white font-semibold transition-all duration-300">
-                            Experience
-                        </Link>
-                        <Link to={"#"} className="text-sm px-4 py-2 rounded-full hover:bg-white font-semibold transition-all duration-300">
-                            Projects
-                        </Link>
-                        <Link to={"#"} className="text-sm px-4 py-2 rounded-full hover:bg-white font-semibold transition-all duration-300">
-                            Skills
-                        </Link>
-                    </div> */}
+                    <img src={LOGO} className="h-full w-auto  sm:block" />
                     <div className="z-10 flex min-h-64 items-center justify-center">
                         <div
                             className={cn(
