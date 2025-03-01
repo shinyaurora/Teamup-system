@@ -1,4 +1,3 @@
-import { TextAnimate } from "@/components/magicui/text-animate";
 import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
 import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
@@ -12,18 +11,13 @@ const Hero = () => {
                     Hi there<span className="animate-wiggle block ml-2">👋</span>
                     {/* </TextAnimate> */}
                 </div>
-                <div className="text-[40px] font-[funny]">
-                    <TextAnimate>
-                        Thank you for visiting my site.
-                    </TextAnimate>
-                </div>
-                <div className="font-[funny] text-sm flex flex-col gap-3 justify-center items-center mt-4">
-                    <div className="flex items-center">
+                <div className="font-[funny] flex flex-col gap-4 justify-center items-center mt-4">
+                    <div className="flex items-center text-lg">
                         I am a
                         <AnimatedGradientText className="mx-1">
                             <span
                                 className={cn(
-                                    `inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,
+                                    `inline animate-gradient font-black bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,
                                 )}
                             >
                                 Senior Full-Stack Developer
@@ -31,10 +25,42 @@ const Hero = () => {
                         </AnimatedGradientText>
                         with over 8 years of experience.
                     </div>
-                    <div className="text-lg text-center px-2">
-                        <TextAnimate>
-                            Proficient in React, Node.js, and AI technologies with deep expertise in Web3 and blockchain development.
-                        </TextAnimate>
+                    <div className="text-center px-2 flex items-center gap-1 text-md">
+                        Proficient in
+                        <div className="bg-black rounded-full font-bold border border-white text-white px-2 py-0.5 text-sm font-mono">
+                            React
+                        </div>
+                        <div className="bg-black rounded-full font-bold border border-white text-white px-2 py-0.5 text-sm font-mono">
+                            Angular
+                        </div>
+                        <div className="bg-black rounded-full font-bold border border-white text-white px-2 py-0.5 text-sm font-mono">
+                            Node.js
+                        </div>
+                        <div className="bg-black rounded-full font-bold border border-white text-white px-2 py-0.5 text-sm font-mono">
+                            Python
+                        </div>
+                    </div>
+                    <div className="flex items-center gap-1">
+                        I am Diving into 
+                        <AnimatedGradientText className="">
+                            <span
+                                className={cn(
+                                    `inline animate-gradient font-black bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,
+                                )}
+                            >
+                                Artificial Intelligence
+                            </span>
+                        </AnimatedGradientText>
+                        <AnimatedGradientText className="">
+                            <span
+                                className={cn(
+                                    `inline animate-gradient font-black bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,
+                                )}
+                            >
+                                Web 3
+                            </span>
+                        </AnimatedGradientText> fields more deeply.
+
                     </div>
                     <div>
                         Let’s connect if you're seeking a results-driven developer.

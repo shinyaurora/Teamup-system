@@ -1,17 +1,22 @@
-import { OrbitingCircles } from "../magicui/orbiting-circles";
-import { TextAnimate } from "../magicui/text-animate";
+import { OrbitingCircles } from "@/components/magicui/orbiting-circles";
+import { TextAnimate } from "@/components/magicui/text-animate";
+import { AnimatedSpan, Terminal, TypingAnimation } from "@/components/magicui/terminal";
+import VisibilitySensor from "react-visibility-sensor";
 import Icons from "../icons";
+import { useState } from "react";
 
 const Skills = () => {
+    const [visible, setVisible] = useState(false);
+
     return (
-        <div className="border-b border-black/50 pt-12">
-            <h3 className="text-center font-bold font-[funny] text-3xl mb-8">
-                <TextAnimate>
-                    This Is How I Approach Problems
-                </TextAnimate>
-            </h3>
+        <div className="border-b border-black/50">
             <div className="grid grid-cols-1 lg:grid-cols-2">
-                <div className="border-b lg:border-r border-black/50 px-4 pt-4 pb-12">
+                <div className="border-b lg:border-b-0 lg:border-r border-black/50 px-4 pt-4 ">
+                    <h3 className="text-center font-bold font-[funny] text-3xl mt-8">
+                        <TextAnimate>
+                            What skills do you have
+                        </TextAnimate>
+                    </h3>
                     <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden">
                         <OrbitingCircles iconSize={40}>
                             <Icons.react />
@@ -40,8 +45,61 @@ const Skills = () => {
                         </OrbitingCircles>
                     </div>
                 </div>
-                <div className=" px-4 pt-4 pb-12 h-[400px]">
+                <div className="border-b lg:border-b-0 lg:border-r border-black/50 px-4 pt-4 ">
+                    <h3 className="text-center font-bold font-[funny] text-3xl mt-8" onClick={() => setVisible(!visible)}>
+                        <TextAnimate>
+                            How do you handle task
+                        </TextAnimate>
+                    </h3>
+                    <VisibilitySensor onChange={(isVisible: boolean) => setVisible(isVisible)}>
 
+                        <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden">
+                            {visible &&
+                                <Terminal>
+                                    <TypingAnimation>&gt; How do you complete your task</TypingAnimation>
+
+                                    <AnimatedSpan delay={1500} className="text-green-500">
+                                        <span>✔ Clear the runway with task analysis.</span>
+                                    </AnimatedSpan>
+
+                                    <AnimatedSpan delay={2000} className="text-green-500">
+                                        <span>✔ Google-fu to find the latest and greatest solutions.</span>
+                                    </AnimatedSpan>
+
+                                    <AnimatedSpan delay={2500} className="text-green-500">
+                                        <span>✔ Blueprint the solution with design and structure.</span>
+                                    </AnimatedSpan>
+
+                                    <AnimatedSpan delay={3000} className="text-green-500">
+                                        <span>✔ Build fast, break things, then fix faster.</span>
+                                    </AnimatedSpan>
+
+                                    <AnimatedSpan delay={3500} className="text-green-500">
+                                        <span>✔ Collaborate to spark those "aha" moments.</span>
+                                    </AnimatedSpan>
+
+                                    <AnimatedSpan delay={4000} className="text-green-500">
+                                        <span>✔ Test thoroughly—because bugs are sneaky.</span>
+                                    </AnimatedSpan>
+
+                                    <AnimatedSpan delay={4500} className="text-green-500">
+                                        <span>✔ Deploy like a pro and keep an eye on the skies.</span>
+                                    </AnimatedSpan>
+
+                                    <AnimatedSpan delay={5000} className="text-green-500">
+                                        <span>✔ Reflect, learn, and gear up for the next challenge</span>
+                                    </AnimatedSpan>
+
+                                    <TypingAnimation delay={6500} className="text-muted-foreground">
+                                        Success! Project completed.
+                                    </TypingAnimation>
+
+                                    <TypingAnimation delay={7000} className="text-muted-foreground">
+                                        Enjoy the rest!
+                                    </TypingAnimation>
+                                </Terminal>}
+                        </div>
+                    </VisibilitySensor>
                 </div>
             </div>
         </div>
