@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion, useMotionValue } from "motion/react";
+import { AnimatePresence, motion, MotionValue, useMotionValue } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
 
 /**
@@ -86,8 +86,8 @@ export function PointerWrapper({
  * @property {MotionValue<number>} y - The y-coordinate position of the pointer
  */
 interface PointerProps {
-  x: any;
-  y: any;
+  x: MotionValue<number>;
+  y: MotionValue<number>;
 }
 
 /**
@@ -98,7 +98,7 @@ interface PointerProps {
  * @component
  * @param {PointerProps} props - The component props
  */
-function Pointer({ x, y }: PointerProps): JSX.Element {
+function Pointer({ x, y }: PointerProps): React.JSX.Element {
   return (
     <motion.div
       className="pointer-events-none absolute z-50 h-4 w-4 rounded-full"
