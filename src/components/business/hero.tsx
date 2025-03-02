@@ -2,6 +2,11 @@ import HeroVideo from "@/assets/video/business.mp4";
 import Logo from "@/assets/images/logo.png";
 
 const Hero = () => {
+  const handleGoTo = (id: string) => {
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
     <div className="w-full h-[800px] relative mt-20">
       <video autoPlay loop muted controls={false} className="w-full h-full object-cover">
@@ -16,8 +21,8 @@ const Hero = () => {
               A platform where talent is recognized, opportunities are fair, and skills define success—not geography or background.
             </p>
             <div className="flex items-center justify-center gap-4 mt-12">
-              <button className="bg-[#C31432] text-white w-52 py-2 rounded-md">How It Works</button>
-              <button className="bg-[#C31432] text-white w-36 py-2 rounded-md">Who I Am</button>
+              <button className="bg-[#622091] border-2 text-white w-52 py-2 rounded-md" onClick={() => handleGoTo("about-us")}>How It Works</button>
+              <button className="bg-[#622091] border-2 text-white w-36 py-2 rounded-md" onClick={() => handleGoTo("about-you")}>Who I Am</button>
             </div>
           </div>
         </div>

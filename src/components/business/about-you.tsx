@@ -22,7 +22,7 @@ const AboutYou = () => {
 
     return (
         <div className="py-20">
-            <div className="container px-4 mx-auto">
+            <div className="container px-4 mx-auto" id="about-you">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div className="flex items-center justify-center">
                         <img src={IMAGES[image]} className="max-w-md" />

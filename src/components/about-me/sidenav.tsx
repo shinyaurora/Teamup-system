@@ -25,24 +25,24 @@ const DATA = {
         social: {
             GitHub: {
                 name: "GitHub",
-                url: "#",
+                url: "https://github.com/luckdev01",
                 icon: Icons.gitHub,
             },
             LinkedIn: {
                 name: "LinkedIn",
-                url: "#",
+                url: "https://www.linkedin.com/in/denniskong823/",
                 icon: Icons.linkedin,
             },
         },
         contact: {
             email: {
                 name: "Send Email",
-                url: "#",
+                url: "mailto:cupid.jack505@gmail.com",
                 icon: Icons.email,
             },
             phone: {
                 name: "Send Email",
-                url: "#",
+                url: "+1 (332) 900 6245",
                 icon: Icons.phone
             },
 

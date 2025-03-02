@@ -2,7 +2,7 @@ import AboutImage from "@/assets/images/about.png";
 
 const AboutUs = () => {
     return (
-        <div className="bg-[#622091] py-20">
+        <div className="bg-[#622091] py-20" id="about-us">
             <div className="container px-4 mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div className="flex flex-col gap-2 order-2 lg:order-1">
