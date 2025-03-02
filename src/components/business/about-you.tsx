@@ -42,7 +42,7 @@ const AboutYou = () => {
                             If you excel at something, if you're ready to take on a new challenge,
                             and if you want to be part of building something groundbreaking - 
                             don't hesitate to 
-                            <Link to="/about-me">
+                            <Link to={process.env.PERSONAL_URL || "#"}>
                                 <span className="hover:underline ml-0.5 pb-0.5 font-semibold border bg-[#622091] text-white rounded-md px-2">reach out to me</span>.
                             </Link>
                         </p>

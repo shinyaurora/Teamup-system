@@ -8,6 +8,11 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
+  define: {
+    'process.env': {
+      PERSONAL_URL: 'https://denniskong823.vercel.app'
+    }
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
