@@ -1,10 +1,15 @@
 import { useRoutes, BrowserRouter as Router, Navigate } from 'react-router-dom';
-import AboutMe from './pages/about-me';
+import AboutMe from '@/pages/about-me';
 import { PointerWrapper } from './components/magicui/pointer';
+import Business from '@/pages/business';
 
 const AppRoutes = () => {
 
   const routes = useRoutes([
+    {
+      path: '/',
+      element: <Business />
+    },
     {
       path: '/about-me',
       element: <AboutMe />,

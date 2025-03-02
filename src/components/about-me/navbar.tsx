@@ -2,13 +2,16 @@ import LOGO from "@/assets/images/logo.png";
 import { cn } from "@/lib/utils";
 import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text";
 import { ArrowRightIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
         <div className="w-full fixed top-0 backdrop-blur-3xl z-30 bg-orange-300/10">
             <div className="container mx-auto">
                 <div className="flex items-center justify-between h-14 md:h-18 w-full px-8 py-4">
-                    <img src={LOGO} className="h-full w-auto  sm:block" />
+                    <Link to={"/"} className="h-full">
+                        <img src={LOGO} className="h-full w-auto sm:block" />
+                    </Link>
                     <div className="z-10 flex min-h-64 items-center justify-center">
                         <div
                             className={cn(

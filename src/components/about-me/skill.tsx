@@ -51,55 +51,52 @@ const Skills = () => {
                             How do you handle task
                         </TextAnimate>
                     </h3>
-                    <VisibilitySensor onChange={(isVisible: boolean) => setVisible(isVisible)}>
+                    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden">
+                        {true &&
+                            <Terminal>
+                                <TypingAnimation>&gt; How do you complete your task</TypingAnimation>
 
-                        <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden">
-                            {visible &&
-                                <Terminal>
-                                    <TypingAnimation>&gt; How do you complete your task</TypingAnimation>
+                                <AnimatedSpan delay={1500} className="text-green-500">
+                                    <span>✔ Clear the runway with task analysis.</span>
+                                </AnimatedSpan>
 
-                                    <AnimatedSpan delay={1500} className="text-green-500">
-                                        <span>✔ Clear the runway with task analysis.</span>
-                                    </AnimatedSpan>
+                                <AnimatedSpan delay={2000} className="text-green-500">
+                                    <span>✔ Google-fu to find the latest and greatest solutions.</span>
+                                </AnimatedSpan>
 
-                                    <AnimatedSpan delay={2000} className="text-green-500">
-                                        <span>✔ Google-fu to find the latest and greatest solutions.</span>
-                                    </AnimatedSpan>
+                                <AnimatedSpan delay={2500} className="text-green-500">
+                                    <span>✔ Blueprint the solution with design and structure.</span>
+                                </AnimatedSpan>
 
-                                    <AnimatedSpan delay={2500} className="text-green-500">
-                                        <span>✔ Blueprint the solution with design and structure.</span>
-                                    </AnimatedSpan>
+                                <AnimatedSpan delay={3000} className="text-green-500">
+                                    <span>✔ Build fast, break things, then fix faster.</span>
+                                </AnimatedSpan>
 
-                                    <AnimatedSpan delay={3000} className="text-green-500">
-                                        <span>✔ Build fast, break things, then fix faster.</span>
-                                    </AnimatedSpan>
+                                <AnimatedSpan delay={3500} className="text-green-500">
+                                    <span>✔ Collaborate to spark those "aha" moments.</span>
+                                </AnimatedSpan>
 
-                                    <AnimatedSpan delay={3500} className="text-green-500">
-                                        <span>✔ Collaborate to spark those "aha" moments.</span>
-                                    </AnimatedSpan>
+                                <AnimatedSpan delay={4000} className="text-green-500">
+                                    <span>✔ Test thoroughly—because bugs are sneaky.</span>
+                                </AnimatedSpan>
 
-                                    <AnimatedSpan delay={4000} className="text-green-500">
-                                        <span>✔ Test thoroughly—because bugs are sneaky.</span>
-                                    </AnimatedSpan>
+                                <AnimatedSpan delay={4500} className="text-green-500">
+                                    <span>✔ Deploy like a pro and keep an eye on the skies.</span>
+                                </AnimatedSpan>
 
-                                    <AnimatedSpan delay={4500} className="text-green-500">
-                                        <span>✔ Deploy like a pro and keep an eye on the skies.</span>
-                                    </AnimatedSpan>
+                                <AnimatedSpan delay={5000} className="text-green-500">
+                                    <span>✔ Reflect, learn, and gear up for the next challenge</span>
+                                </AnimatedSpan>
 
-                                    <AnimatedSpan delay={5000} className="text-green-500">
-                                        <span>✔ Reflect, learn, and gear up for the next challenge</span>
-                                    </AnimatedSpan>
+                                <TypingAnimation delay={6500} className="text-muted-foreground">
+                                    Success! Project completed.
+                                </TypingAnimation>
 
-                                    <TypingAnimation delay={6500} className="text-muted-foreground">
-                                        Success! Project completed.
-                                    </TypingAnimation>
-
-                                    <TypingAnimation delay={7000} className="text-muted-foreground">
-                                        Enjoy the rest!
-                                    </TypingAnimation>
-                                </Terminal>}
-                        </div>
-                    </VisibilitySensor>
+                                <TypingAnimation delay={7000} className="text-muted-foreground">
+                                    Enjoy the rest!
+                                </TypingAnimation>
+                            </Terminal>}
+                    </div>
                 </div>
             </div>
         </div>
