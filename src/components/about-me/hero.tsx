@@ -20,15 +20,18 @@ const Hero = () => {
                                     `inline animate-gradient font-black bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,
                                 )}
                             >
-                                Senior Full-Stack Developer
+                                Senior Software Engineer
                             </span>
                         </AnimatedGradientText>
-                        with over 8 years of experience.
+                        with over 10 years of experience.
                     </div>
                     <div className="text-center px-2 flex items-center gap-1 text-md">
                         Proficient in
                         <div className="bg-black rounded-full font-bold border border-white text-white px-2 py-0.5 text-sm font-mono">
                             React
+                        </div>
+                        <div className="bg-black rounded-full font-bold border border-white text-white px-2 py-0.5 text-sm font-mono">
+                            React Native
                         </div>
                         <div className="bg-black rounded-full font-bold border border-white text-white px-2 py-0.5 text-sm font-mono">
                             Angular
